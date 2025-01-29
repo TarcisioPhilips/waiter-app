@@ -9,7 +9,7 @@ export function Categories() {
   const [selectedCategory, setSelectedCategory] = useState('')
 
   function handleSelectCategory(categoryId: string) {
-    setSelectedCategory(categoryId)
+    setSelectedCategory(categoryId === selectedCategory ? '' : categoryId)
   }
 
   return (
