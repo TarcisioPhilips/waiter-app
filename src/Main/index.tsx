@@ -19,8 +19,11 @@ export function Main() {
       </Container>
       <Footer>
         <FooterContainer>
-          <Button />
+          <Button onPress={() => { alert('Novo pedido') }}>
+            Confirmar
+          </Button>
         </FooterContainer>
+
       </Footer>
     </>
   )

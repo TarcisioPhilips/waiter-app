@@ -1,12 +1,22 @@
 import { Container } from './style'
 import { Text } from '../Text'
 
-export function Button() {
+interface ButtonProps {
+  children: React.ReactNode
+  onPress: () => void
+  disabled?: boolean
+}
+
+
+export function Button({ children, onPress, disabled }: ButtonProps) {
+
   return (
-    <Container>
+    <Container onPress={onPress} disabled={disabled}>
       <Text weight="600" color="#fff">
-        Confirmar
+        {children}
       </Text>
     </Container>
+
+
   )
 }
